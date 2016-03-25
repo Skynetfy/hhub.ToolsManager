@@ -1,0 +1,94 @@
+﻿@{
+    Layout = null;
+}
+
+<header class="navbar navbar-fixed-top bs-docs-nav " role="banner">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <div class="hhub-logo">
+                <i class="glyphicon glyphicon-grain"></i> <span>H-Hub</span>
+            </div>
+        </div>
+        <nav id="bs-navbar" class="collapse navbar-collapse">
+
+            <ul class="nav navbar-nav navbar-right" style="margin-right: 0;">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>&nbsp;@ViewBag.userName <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><i class="glyphicon glyphicon-cog"></i> &nbsp;设 置</a></li>
+                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#model-updatepassword"><i class="glyphicon glyphicon-link"></i> &nbsp;修改密码</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="javascript:void(0)" data-toggle="modal" data-target="#model-login-out"><i class="glyphicon glyphicon-off"></i> &nbsp;注销</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="modal fade" role="dialog" aria-labelledby="gridSystemModalLabel" id="model-login-out">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="gridSystemModalLabel">提示框</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div style="text-align: center; color: #000;">您确定要安全退出系统吗？</div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                        <div class="col-md-6 col-md-offset-4">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <a href="@Url.Action("LoginOut")" class="btn btn-primary">确定</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="model-updatepassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">修改密码</h4>
+            </div>
+            <div class="modal-body">
+                <div id="result-error-message" class="alert alert-danger" role="alert" style="display: none;"> </div>
+                <form class="form-horizontal" action="@Url.Action("UpdatePassword", "User")" method="POST" data-ajax="true" data-ajax-loading="#price-loadingid" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-success="UpdatePasswordSuccess" data-ajax-update="#table-roomcount-list">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">旧密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" name="oldpassword" class="form-control" placeholder="Old Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">新密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" name="newpassword" class="form-control" placeholder="New Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">确认密码</label>
+                        <div class="col-sm-10">
+                            <input type="password" name="wnewpassword" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

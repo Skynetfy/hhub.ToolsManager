@@ -1,0 +1,16 @@
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\HHubToolsManager.Domain.dll
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\HHubToolsManager.Domain.pdb
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\obj\Debug\HHubToolsManager.Domain.dll
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\obj\Debug\HHubToolsManager.Domain.pdb
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\HZ.HHub.Comm.dll
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\NLog.dll
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\NLog.MongoDB.dll
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\MongoDB.Bson.dll
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\MongoDB.Driver.Legacy.dll
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\MongoDB.Driver.Core.dll
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\MongoDB.Driver.dll
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\NLog.MongoDB.pdb
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\NLog.xml
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\obj\Debug\HHubToolsManager.Domain.csprojResolveAssemblyReference.cache
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\MongoDB.Bson.xml
+E:\work\HHubToolsManager\HHubToolsManager\HHubToolsManager.Domain\bin\Debug\MongoDB.Driver.xml

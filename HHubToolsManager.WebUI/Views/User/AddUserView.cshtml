@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddUserView</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="~/Content/font/font-awesone.css" rel="stylesheet" />
+    @*<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.css">*@
+    <link href="~/Content/bootstrap-table.css" rel="stylesheet" />
+    <link href="~/Content/admin.css" rel="stylesheet" />
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/bootstrap-table.min.js"></script>*@
+    <!-- Latest compiled and minified Locales -->
+    @*<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.10.1/locale/bootstrap-table-zh-CN.min.js"></script>*@
+    <script src="~/Scripts/Solution.js"></script>
+</head>
+<body>
+    <div>
+        <form class="form-horizontal" action="@Url.Action("AddUser")" method="POST" data-ajax="true" data-ajax-loading="#price-loadingid" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-success="addSuccess" data-ajax-update="#table-roomcount-list">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" name="email" class="form-control" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">DisplayName</label>
+                <div class="col-sm-10">
+                    <input type="text" name="displayname" class="form-control" placeholder="DisplayName">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" name="passwold" class="form-control" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+    <script src="~/Scripts/bootstrap-table.js"></script>
+    <script src="~/Scripts/bootstrap-table-zh-CN.js"></script>
+    <script src="~/Scripts/ztree/jquery.ztree.core-3.5.min.js"></script>
+    <script src="~/Scripts/ztree/jquery.ztree.excheck-3.5.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+</body>
+</html>

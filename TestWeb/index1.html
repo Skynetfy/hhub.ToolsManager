@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link href="Content/index.css" rel="stylesheet" />
+    <!--[if IE]>
+        <script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="stars">
+
+    </div>
+    <div class="wrapper">
+        <div class="container">
+            <h1>H-Hub Tools Manager</h1>
+            <form class="form" method="POST" data-ajax="true" data-ajax-loading="#price-loadingid" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-success="LoginSuccess">
+                <input name="name" type="text" id="name" placeholder="Username" data-easyform="length:4 16;char-normal;real-time;"
+                       data-message="用户名必须为4—16位的英文字母或数字"
+                       data-easytip="position:right;class:easy-red;" data-message-ajax="用户名已存在!">
+                <input name="password" type="password" id="password" placeholder="Password" data-easyform="length:4 16;char-normal;real-time;"
+                       data-message="密码必须为6—16位"
+                       data-easytip="position:right;class:easy-red;">
+                <input type="submit" data-easytip="position:right;class:easy-red;" data-easytip-message="一个例子" id="login-button" value="登 录" />
+            </form>
+        </div>
+    </div>
+    <div id="canvas">
+        <div class="me">
+            <div class="torso">
+                <div class="left leg">
+                    <div class="left thigh">
+                        <div class="left shin">
+                            <div class="left foot">
+                                <div class="left toes"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- left leg -->
+
+                <div class="right leg">
+                    <div class="right thigh">
+                        <div class="right shin">
+                            <div class="right foot">
+                                <div class="right toes"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right leg -->
+
+                <div class="left arm">
+                    <div class="left bicep">
+                        <div class="left forearm"></div>
+                    </div>
+                </div>
+                <!-- left arm -->
+
+                <div class="right arm">
+                    <div class="right bicep">
+                        <div class="right forearm"></div>
+                    </div>
+                </div>
+                <!-- right arm -->
+
+            </div>
+            <!-- torso -->
+        </div>
+    </div>
+    <script src="Scripts/stopExecutionOnTimeout.js"></script>
+    <script src="Scripts/jquery-1.8.2.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var stars = 800;
+            var $stars = $('.stars');
+            var r = 800;
+            for (var i = 0; i < stars; i++) {
+                if (window.CP.shouldStopExecution(1)) {
+                    break;
+                }
+                var $star = $('<div/>').addClass('star');
+                $stars.append($star);
+            }
+            window.CP.exitedLoop(1);
+            $('.star').each(function () {
+                var cur = $(this);
+                var s = 0.2 + Math.random() * 1;
+                var curR = r + Math.random() * 300;
+                cur.css({
+                    transformOrigin: '0 0 ' + curR + 'px',
+                    transform: ' translate3d(0,0,-' + curR + 'px) rotateY(' + Math.random() * 360 + 'deg) rotateX(' + Math.random() * -50 + 'deg) scale(' + s + ',' + s + ')'
+                });
+            });
+        });
+
+    </script>
+
+</body>
+</html>

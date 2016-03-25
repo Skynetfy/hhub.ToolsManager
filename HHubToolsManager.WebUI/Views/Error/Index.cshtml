@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<script>
+    setTimeout(function () {
+        location.href = "@Url.Action("Index","Admin")";
+    }, 5000);
+</script>
+<div>
+    抱歉，你没有权限直接访问此页面，5秒后将直接跳转到指定页面。
+</div>
+</body>
+</html>

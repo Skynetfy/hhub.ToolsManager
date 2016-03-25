@@ -1,0 +1,88 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="~/Content/login.css" rel="stylesheet" />
+    <link href="~/Content/easyform.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="container">
+            <h1>H-Hub Tools Manager</h1>
+            <form class="form" action="@Url.Action("Login")" method="POST" data-ajax="true" data-ajax-loading="#price-loadingid" data-ajax-method="Post" data-ajax-mode="replace" data-ajax-success="LoginSuccess">
+                <input name="name" type="text" id="name" placeholder="Username" data-easyform="length:4 16;char-normal;real-time;"
+                       data-message="用户名必须为4—16位的英文字母或数字"
+                       data-easytip="position:right;class:easy-red;" data-message-ajax="用户名已存在!">
+                <input name="password" type="password" id="password" placeholder="Password" data-easyform="length:4 16;char-normal;real-time;"
+                       data-message="密码必须为6—16位"
+                       data-easytip="position:right;class:easy-red;">
+                <input type="submit" data-easytip="position:right;class:easy-red;" data-easytip-message="一个例子" id="login-button" value="登 录" />
+            </form>
+        </div>
+        <div id="t-ov">
+            <div class="motime">
+                <div id="head-body"></div>
+                <div id="head-topcover"></div>
+                <div id="head-toplogo-bg"></div>
+                <div id="head-toplogo"></div>
+                <div id="head-toplogo-2"></div>
+                <div id="head-bottom"></div>
+                <div id="head-bottom-2"></div>
+                <div id="head-sw"></div>
+                <div id="head-sw-2"></div>
+                <div id="head-eye"></div>
+                <div id="head-eye-2"></div>
+            </div>
+        </div>
+        <ul class="bg-bubbles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/2.1.0/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Scripts/easyForm.js"></script>
+    <script>
+        var tip1, tip2;
+        $(function () {
+            $('.form').easyform();
+            tip1 = $("#name").easytip();
+            tip2 = $("#password").easytip();
+        });
+
+        function LoginSuccess(v, o) {
+            if (v === "登录成功") {
+                location.href = location.origin + "/admin/index";
+            } else if (v === '密码错误') {
+                tip2.show(v);
+            } else if (v === "用户不存在") {
+                tip1.show(v);
+            } else {
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>
